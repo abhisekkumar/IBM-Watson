@@ -28,12 +28,9 @@ http             = Net::HTTP.new address.host, address.port
 http.use_ssl     = true
 http.verify_mode = OpenSSL::SSL::VERIFY_PEER
 
-# If you entered your credentials in the first
-# exercise, no need to enter them again here. The
-# ||= operator will only assign these values if
-# they are not already set.
-consumer_key ||= OAuth::Consumer.new "ENTER IN EXERCISE 1", ""
-access_token ||= OAuth::Token.new "ENTER IN EXERCISE 1", ""
+
+consumer_key ||= OAuth::Consumer.new "bXerZzt8GanD42o7kFHb0VPe3", ""
+access_token ||= OAuth::Token.new "211174890-8nY4AN2ZtZay6HnEchhmOrFgZSBLN5Ypxu13mSTG", ""
 
 # Issue the request.
 request.oauth! http, consumer_key, access_token
